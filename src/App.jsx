@@ -6,6 +6,7 @@ import Stats from "./components/Stats";
 import MainSection from "./components/MainSection";
 import { ToastContainer } from "react-toastify";
 import Steps from "./components/Steps";
+import Pricing from "./components/Pricing";
 
 const App = () => {
   const [cartItems, setCartItems] = useState([]);
@@ -18,6 +19,7 @@ const App = () => {
         <Stats></Stats>
         <MainSection cartItems={cartItems} setCartItems={setCartItems}></MainSection>
         <Steps></Steps>
+        <Pricing></Pricing>
       </div>
     </>
   );
