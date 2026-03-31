@@ -7,7 +7,7 @@ const Stats = () => {
     { value: "4.9", label: "Rating" },
   ];
   return (
-    <section className="bg-purple-600 py-10 px-6">
+    <section className="bg-gradient-to-r from-[#4f39f3] to-[#9514fa] py-10 px-6">
       <div className="max-w-3xl mx-auto">
         <div className="flex flex-col sm:flex-row items-center justify-around gap-8">
           {stats.map((stat, index) => (

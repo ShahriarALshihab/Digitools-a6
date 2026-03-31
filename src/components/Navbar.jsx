@@ -92,7 +92,7 @@ const Navbar = ({ cartCount }) => {
               />
             </svg>
             {cartCount > 0 && (
-              <span className="badge badge-xs bg-purple-600 text-white border-0 absolute -top-1 -right-1 min-w-[18px] h-[18px] text-[10px]">
+              <span className="badge badge-xs bg-purple-600 text-white border-0 absolute -top-1 -right-1 min-w-4.5 h-4.5 text-[10px]">
                 {cartCount}
               </span>
             )}

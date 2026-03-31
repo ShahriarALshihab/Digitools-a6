@@ -151,22 +151,5 @@
       "Sales analytics"
     ],
     "icon": "🛍️"
-  },
-  {
-    "id": 10,
-    "name": "Productivity Planner",
-    "description": "Stay focused and organized with smart task management and time-blocking tools.",
-    "price": 12,
-    "period": "mo",
-    "tag": "New",
-    "tagType": "new",
-    "features": [
-      "Smart task prioritization",
-      "Time blocking",
-      "Habit tracker",
-      "Team boards",
-      "Calendar sync"
-    ],
-    "icon": "📅"
   }
 ]

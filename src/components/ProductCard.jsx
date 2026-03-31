@@ -18,7 +18,7 @@ const ProductCard = ({product, onAddToCart}) => {
         {
             product.tag &&(
                 <span className={`absolute top-4 right-4 text-xs font-semibold px-2.5 py-1 rounded-full ${
-                    tagStyles[product.tagtype] || "bg-gray-100 text-gray-600"
+                    tagStyles[product.tagType] || "bg-gray-100 text-gray-600"
                 }`}>
                     {product.tag}
                 </span>
@@ -43,7 +43,7 @@ const ProductCard = ({product, onAddToCart}) => {
       <ul className='space-y-1.5'>
         {product.features.map((feature, index)=>(
            <li key={index} className="flex items-center gap-2 text-xs text-gray-600">
-            <svg className="w-3.5 h-3.5 text-purple-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg className="w-3.5 h-3.5 text-green-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
             </svg>{feature}
             </li> 
@@ -52,7 +52,7 @@ const ProductCard = ({product, onAddToCart}) => {
       </ul>
 
       <button onClick={handleBuyNow} className={`btn w-full rounded-full border-0 font-semibold text-sm mt-auto transition-all ${
-        added?"bg-green-500 hover:bg-green-600 text-white": "bg-purple-600 hover:bg-purple-700 text-white"
+        added?"bg-green-500 hover:bg-green-600 text-white": "bg-gradient-to-r from-[#4f39f3] to-[#9514fa] hover:bg-purple-700 text-white"
       }`}>
         {added?"Added to Cart": "Buy Now"}
       </button>

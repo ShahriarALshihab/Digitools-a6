@@ -11,17 +11,19 @@ const MainSection = ({ cartItems, setCartItems }) => {
   const handleAddToCart = (product) => {
     const newItem = { ...product, cartId: Date.now() + Math.random() };
     setCartItems((prev) => [...prev, newItem]);
+    //console.log(cartItems);
     toast.success(`"${product.name}" added to cart!`, {
       position: "top-right",
       autoClose: 3000,
     });
   };
+  
 
   const handleRemove = (cartId) => {
-    const item = cartItems.find((i) => i.cardId === cartId);
+    const item = cartItems.find((i) => i.cartId === cartId);
     setCartItems((prev) => prev.filter((i) => i.cartId !== cartId));
     toast.error(`❌ "${item?.name}" removed from cart.`, {
-      position: "top-right",
+      position: "bottom-center",
       autoClose: 3000,
     });
   };
@@ -29,7 +31,7 @@ const MainSection = ({ cartItems, setCartItems }) => {
   const handleCheckout = () => {
     setCartItems([]);
     toast.success("✅ Checkout successful!", {
-      position: "top-right",
+      position:"bottom-center",
       autoClose: 3000,
     });
   };
@@ -53,28 +55,20 @@ const MainSection = ({ cartItems, setCartItems }) => {
               onClick={() => setActiveTab("products")}
               className={`px-6 py-2 rounded-full text-sm font-semibold transition-all ${
                 activeTab === "products"
-                  ? "bg-purple-600 text-white shadow"
-                  : "text-gray-600 hover: text-gray-900"
+                  ? "bg-purple-600 font-semibold text-white shadow"
+                  : "text-gray-600 hover:text-gray-900"
               }`}
             >
               Products
             </button>
             <button
               onClick={() => setActiveTab("cart")}
-              className={`px-6 py-2 rounded-full text-sm font-semibold transition-all flex items-center gap-1.5 ${activeTab === "cart" ? "bg-purple-600 text-white shadow" : "text-gray-600 hover:text-gray-900"}`}
+              className={`px-6 py-2 rounded-full text-sm font-semibold transition-all flex items-center gap-1.5 ${activeTab === "cart" ? "bg-purple-600 font-semibold text-white shadow" : "text-gray-600 hover:text-gray-900"}`}
             >
-              Cart
-              {cartItems.length > 0 && (
-                <span
-                  className={`text-xs rounded-full min-w-[20px] h-5 flex items-center justify-center px-1 font-bold${
-                    activeTab === "cart"
-                      ? "bg-white text-purple-600"
-                      : "bg-purple-600 text-white"
-                  }`}
-                >
-                  {cartItems.length}
+              Cart <span>
+                  ({cartItems.length})
                 </span>
-              )}
+             
             </button>
           </div>
         </div>
