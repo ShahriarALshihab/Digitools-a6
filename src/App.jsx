@@ -1,19 +1,20 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from 'react'
-import Navbar from './components/Navbar'
-import Banner from './components/Banner';
-
+import React, { useState } from "react";
+import Navbar from "./components/Navbar";
+import Banner from "./components/Banner";
+import Stats from "./components/Stats";
 
 const App = () => {
-const [cartItems, setCartItems]=useState([]); 
+  const [cartItems, setCartItems] = useState([]);
   return (
-<>
-<div>
-<Navbar cartCount={cartItems.length}></Navbar>
-<Banner></Banner>
-</div>
-</>
-  )
-}
+    <>
+      <div>
+        <Navbar cartCount={cartItems.length}></Navbar>
+        <Banner></Banner>
+        <Stats></Stats>
+      </div>
+    </>
+  );
+};
 
-export default App
+export default App;
