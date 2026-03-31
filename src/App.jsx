@@ -1,11 +1,16 @@
+/* eslint-disable no-unused-vars */
+import React, { useState } from 'react'
+import Navbar from './components/Navbar'
 
-function App() {
 
-
+const App = () => {
+const [cartItems, setCartItems]=useState([]); 
   return (
-    <>
-      <h1 className="text-3xl font-bold text-red-800">My name is shihab</h1>
-    </>
+<>
+<div>
+<Navbar cartCount={cartItems.length}></Navbar>
+</div>
+</>
   )
 }
 
