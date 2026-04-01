@@ -7,6 +7,7 @@ import MainSection from "./components/MainSection";
 import { ToastContainer } from "react-toastify";
 import Steps from "./components/Steps";
 import Pricing from "./components/Pricing";
+import CallToAction from "./components/CallToAction";
 
 const App = () => {
   const [cartItems, setCartItems] = useState([]);
@@ -20,6 +21,7 @@ const App = () => {
         <MainSection cartItems={cartItems} setCartItems={setCartItems}></MainSection>
         <Steps></Steps>
         <Pricing></Pricing>
+        <CallToAction></CallToAction>
       </div>
     </>
   );
