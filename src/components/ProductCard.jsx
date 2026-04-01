@@ -10,7 +10,7 @@ const ProductCard = ({product, onAddToCart}) => {
     const handleBuyNow=()=>{
         onAddToCart(product); 
         setAdded(true); 
-        setTimeout(()=> setAdded(false),2000); 
+        setTimeout(()=> setAdded(false),3000); 
     }; 
 
   return (
@@ -43,7 +43,7 @@ const ProductCard = ({product, onAddToCart}) => {
       <ul className='space-y-1.5'>
         {product.features.map((feature, index)=>(
            <li key={index} className="flex items-center gap-2 text-xs text-gray-600">
-            <svg className="w-3.5 h-3.5 text-green-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg className="w-3.5 h-3.5 text-green-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
             </svg>{feature}
             </li> 
@@ -52,7 +52,7 @@ const ProductCard = ({product, onAddToCart}) => {
       </ul>
 
       <button onClick={handleBuyNow} className={`btn w-full rounded-full border-0 font-semibold text-sm mt-auto transition-all ${
-        added?"bg-green-500 hover:bg-green-600 text-white": "bg-gradient-to-r from-[#4f39f3] to-[#9514fa] hover:bg-purple-700 text-white"
+        added?"bg-green-500 hover:bg-green-600 text-white": "bg-linear-to-r from-[#4f39f3] to-[#9514fa] hover:bg-purple-700 text-white"
       }`}>
         {added?"Added to Cart": "Buy Now"}
       </button>

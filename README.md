@@ -1,16 +1,46 @@
-# React + Vite
+# 🛒 DigiTools — Premium Digital Tools Marketplace
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> A modern, fully responsive e-commerce platform for discovering and purchasing premium digital productivity tools.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Live Demo
 
-## React Compiler
+>https://digitools-global.netlify.app/
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Technology          | Purpose                            |
+| ------------------- | ---------------------------------- |
+| **React.js**        | Component-based UI architecture    |
+| **Tailwind CSS**    | Utility-first styling              |
+| **DaisyUI**         | Pre-built accessible UI components |
+| **React-Toastify**  | Cart notifications & alerts        |
+| **JavaScript ES6+** | Modern JS features                 |
+| **JSON**            | Static product data store          |
+
+---
+
+## ✨ Key Features
+
+### 🛒 1. Fully Functional Cart System
+
+Add any digital product to your cart, view item totals in real time, remove individual items, or clear the entire cart with the "Proceed to Checkout" button.
+
+### 🔔 2. Toast Notifications via React-Toastify
+
+Every cart interaction — add, remove, checkout — triggers a contextual toast notification, keeping users informed without disrupting the browsing experience.
+
+### 📱 3. Fully Responsive Design
+
+Built mobile-first with Tailwind CSS, the layout adapts gracefully from small phones to large desktop screens. The 3-column product grid collapses to 1-column on mobile.
+
+---
+
+## 🎯 Optional Features Implemented
+
+- ✅ Cart count in Navbar updates on every add/remove
+- ✅ "Buy Now" button temporarily shows "✓ Added to Cart" feedback
+- ✅ Checkout clears all items and resets the cart badge
